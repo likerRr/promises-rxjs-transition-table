@@ -1,4 +1,5 @@
-# Promises -> rxjs. Transition table
+# Promises -> RxJs
+### Transition table
 A set of techniques used with promises and their analogues in rxjs
 
 ## Resolve a value
@@ -17,7 +18,10 @@ Rx.Observable.of(3)
 // -> 3
 ```
 
-[live](https://jsbin.com/racidab/edit?js,console)
+Refs:
+* [Live example](https://jsbin.com/racidab/edit?js,console)
+* [.of()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-of)
+* [.subscribe()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribe)
 
 ## Reject a value or throw an exception
 
@@ -35,4 +39,7 @@ Rx.Observable.throw('Invalid value')
 // -> Invalid value    
 ```
 
-[live](https://jsbin.com/bunuxu/edit?js,console)
+Refs:
+* [Live example](https://jsbin.com/bunuxu/edit?js,console)
+* [.throw()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-throw)
+* [.subscribe()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribe)
