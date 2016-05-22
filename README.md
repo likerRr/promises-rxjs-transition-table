@@ -49,8 +49,8 @@ Refs:
 > [Q](https://github.com/kriskowal/q) Promise
 ```javascript
 Q.reject(1)
-  .finally(() => console.log('All is done'));
-// -> "All is done" 
+  .finally(() => console.log('Finished'));
+// -> "Finished" 
 ```
 
 > RxJs
@@ -58,13 +58,13 @@ Q.reject(1)
 // * finally should be called before subscribe
 // * error callback of observer should be defined, otherwise finally will not be called
 Rx.Observable.throw(1)
-  .finally(() => console.log('All is done'))
+  .finally(() => console.log('Finished'))
   .subscribe(null, () => {});
-// -> "All is done"
+// -> "Finished"
 >
 // * when error callback isn't defined
 Rx.Observable.throw(1)
-  .finally(() => console.log('All is done'))
+  .finally(() => console.log('Finished'))
   .subscribe();
 // -> "Uncaught error"
 ```
