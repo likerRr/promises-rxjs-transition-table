@@ -124,5 +124,49 @@ Refs:
 * .from() [1](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-from), [2](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/from.md)
 * [.subscribe()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribe)
 
+## Creating an instance of promise/observable
+Sometimes you need to implement your own logic of deferred task
+
+> ES6 Promise
+```javascript
+function newPromise(val) {
+  return new Promise((resolve, reject) => {
+    if (val === 1) {
+      resolve(val);
+    } else {
+      reject(false);
+    }
+  });
+}
+>
+newPromise(1)
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+// -> 1
+```
+
+> RxJs
+```javascript
+function newObservable(val) {
+  return Rx.Observable.create(observer => {
+    if (val === 1) {
+      observer.next(val);
+      observer.complete();
+    } else {
+      observer.error(false);
+    }
+  });
+}
+>
+newObservable(1)
+  .subscribe(
+    res => console.log(res), 
+    err => console.log(err), 
+    () => console.log('complete')
+  );
+// -> 1
+// -> 'complete'
+```
+
 ## Sync sequence of tasks
 // In progress
