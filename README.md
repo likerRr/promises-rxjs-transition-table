@@ -168,5 +168,10 @@ newObservable(1)
 // -> 'complete'
 ```
 
+Refs:
+* [Live example](https://jsbin.com/cetiso/edit?js,console)
+* [.create()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#static-method-create)
+* [.subscribe()](http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribe)
+
 ## Sync sequence of tasks
 // In progress
